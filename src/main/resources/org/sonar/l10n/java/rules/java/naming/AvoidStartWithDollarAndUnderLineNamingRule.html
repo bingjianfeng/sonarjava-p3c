@@ -1,0 +1,23 @@
+<p>变量名和类名称不能以_或$开始。</p>
+<p>避免以_或$开始类名和变量名可以减少潜在的问题，并使你的代码更加专业和易于理解。</p>
+<p>如果使用了_或$，也可能与自动生成或编译器生成的代码有冲突。</p>
+<p>错例：</p>
+<pre>
+private String _array;
+
+private String[] $array1;
+
+class _ShouldHaveBracketRule {
+    ....
+}
+</pre>
+<p>正例：</p>
+<pre>
+private String myString;
+
+private String[] myArray;
+
+class MyClass {
+    ....
+}
+</pre>

@@ -1,0 +1,15 @@
+{
+  "title": "类名称不能以_或$开始",
+  "type": "CODE_SMELL",
+  "status": "ready",
+  "remediation": {
+    "func": "Constant\/Issue",
+    "constantCost": "5min"
+  },
+  "tags": [
+    "sonarjava-p3c"
+  ],
+  "defaultSeverity": "CRITICAL",
+  "sqKey": "ClassAvoidStartWithDollarAndUnderLineNamingRule",
+  "scope": "Main"
+}

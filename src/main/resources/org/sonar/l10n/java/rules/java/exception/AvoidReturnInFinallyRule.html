@@ -1,0 +1,17 @@
+<p>finally块中的return语句可能会导致异常处理逻辑被绕过或预期的返回值被丢弃，因此通常不推荐在finally块中使用return。</p>
+<p>为了避免这种情况，应该尽量避免在finally块中使用return语句。如果确实需要在finally块中返回值，可以考虑将返回值保存在一个变量中，然后在finally块结束后返回该变量。</p>
+<p>示例：</p>
+<pre>
+    public int divide(int a, int b) {
+        int result = 0;
+        try {
+            result = a / b;
+        } catch (ArithmeticException e) {
+            // 处理异常
+        } finally {
+            // 避免在finally块中使用return语句
+            // return result;
+        }
+        return result;
+    }
+</pre>

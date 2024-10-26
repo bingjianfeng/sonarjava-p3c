@@ -1,0 +1,15 @@
+{
+  "title": "异常类命名应以Exception结尾",
+  "type": "CODE_SMELL",
+  "status": "ready",
+  "remediation": {
+    "func": "Constant\/Issue",
+    "constantCost": "5min"
+  },
+  "tags": [
+    "sonarjava-p3c"
+  ],
+  "defaultSeverity": "CRITICAL",
+  "sqKey": "ExceptionClassShouldEndWithExceptionRule",
+  "scope": "Main"
+}

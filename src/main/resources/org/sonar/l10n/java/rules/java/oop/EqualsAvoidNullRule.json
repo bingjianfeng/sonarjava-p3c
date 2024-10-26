@@ -1,0 +1,15 @@
+{
+  "title": "Object的equals方法容易抛空指针异常，应使用常量或确定有值的对象来调用equals。",
+  "type": "CODE_SMELL",
+  "status": "ready",
+  "remediation": {
+    "func": "Constant\/Issue",
+    "constantCost": "5min"
+  },
+  "tags": [
+    "sonarjava-p3c"
+  ],
+  "defaultSeverity": "CRITICAL",
+  "sqKey": "EqualsAvoidNullRule",
+  "scope": "Main"
+}

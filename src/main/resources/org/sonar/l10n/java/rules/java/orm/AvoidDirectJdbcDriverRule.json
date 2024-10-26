@@ -1,0 +1,15 @@
+{
+  "title": "禁止直接使用jdbc驱动操作数据库",
+  "type": "VULNERABILITY",
+  "status": "ready",
+  "remediation": {
+    "func": "Constant\/Issue",
+    "constantCost": "5min"
+  },
+  "tags": [
+    "sonarjava-p3c"
+  ],
+  "defaultSeverity": "BLOCKER",
+  "sqKey": "AvoidDirectJdbcDriverRule",
+  "scope": "Main"
+}

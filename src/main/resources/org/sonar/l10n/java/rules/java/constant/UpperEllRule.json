@@ -1,0 +1,15 @@
+{
+  "title": "long或者Long初始赋值时，必须使用大写的L",
+  "type": "CODE_SMELL",
+  "status": "ready",
+  "remediation": {
+    "func": "Constant\/Issue",
+    "constantCost": "5min"
+  },
+  "tags": [
+    "sonarjava-p3c"
+  ],
+  "defaultSeverity": "MAJOR",
+  "sqKey": "UpperEllRule",
+  "scope": "Main"
+}

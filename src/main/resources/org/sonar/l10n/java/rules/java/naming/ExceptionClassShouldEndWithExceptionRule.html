@@ -1,0 +1,21 @@
+<p>异常类命名应以Exception结尾，以符合代码规范。</p>
+<p>错例：</p>
+<pre>
+class TestCase extends Exception {
+    ....
+}
+
+class ValueNullError extends NullPointerException {
+    ....
+}
+</pre>
+<p>正例：</p>
+<pre>
+class TestCaseException extends Exception {
+    ....
+}
+
+class ValueNullException extends NullPointerException {
+    ....
+}
+</pre>

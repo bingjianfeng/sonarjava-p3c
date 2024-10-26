@@ -1,0 +1,20 @@
+<p>在使用正则表达式时，利用好其预编译功能，可以有效加快正则匹配速度。</p>
+<p>说明：不要在方法体内定义：Pattern pattern = Pattern.compile(规则);</p>
+<p>错例：</p>
+<pre>
+class MyPatternDemo {
+    public Pattern getNumberPattern() {
+        Pattern localPattern = Pattern.compile("[0-9]+");
+        return localPattern;
+    }
+}
+</pre>
+<p>正例：</p>
+<pre>
+class MyPatternDemo {
+    private static Pattern numberPattern = Pattern.compile("[0-9]+");
+    public Pattern getNumberPattern() {
+        return numberPattern;
+    }
+}
+</pre>

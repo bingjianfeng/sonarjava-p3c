@@ -1,0 +1,15 @@
+{
+  "title": "在一个switch块内，每个case都要break/return等来终止；且必须包含default语句。",
+  "type": "CODE_SMELL",
+  "status": "ready",
+  "remediation": {
+    "func": "Constant\/Issue",
+    "constantCost": "5min"
+  },
+  "tags": [
+    "sonarjava-p3c"
+  ],
+  "defaultSeverity": "CRITICAL",
+  "sqKey": "SwitchStatementRule",
+  "scope": "Main"
+}

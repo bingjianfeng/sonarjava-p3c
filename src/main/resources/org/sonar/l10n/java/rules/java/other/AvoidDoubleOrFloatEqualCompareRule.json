@@ -1,0 +1,15 @@
+{
+  "title": "浮点数之间的等值判断，基本数据类型不能用==来比较，包装数据类型不能用equals来判断。",
+  "type": "CODE_SMELL",
+  "status": "ready",
+  "remediation": {
+    "func": "Constant\/Issue",
+    "constantCost": "5min"
+  },
+  "tags": [
+    "sonarjava-p3c"
+  ],
+  "defaultSeverity": "CRITICAL",
+  "sqKey": "AvoidDoubleOrFloatEqualCompareRule",
+  "scope": "Main"
+}

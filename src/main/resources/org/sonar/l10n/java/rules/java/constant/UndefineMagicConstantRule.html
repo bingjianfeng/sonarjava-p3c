@@ -1,0 +1,15 @@
+<p>说明：使用魔法值（硬编码的数值或字符串）会降低代码的可读性和可维护性，因为它们缺乏上下文解释，难以理解其含义。如果需要修改这些值，必须在代码中逐一查找和替换，容易遗漏或出错。定义有意义的常量或枚举可以提高代码的清晰度、减少错误，并且便于未来的维护和扩展。例如，将 5 替换为 MAX_ATTEMPTS 可以明确表示该值的用途。</p>
+<p>错例：</p>
+<pre>
+    //Magic values, except for predefined, are forbidden in coding.
+    if (key.equals("Id#taobao_1")) {
+            //...
+    }
+</pre>
+<p>正例：</p>
+<pre>
+    String KEY_PRE = "Id#taobao_1";
+    if (KEY_PRE.equals(key)) {
+            //...
+    }
+</pre>

@@ -1,0 +1,20 @@
+<p>不要在foreach循环里进行元素的remove/add操作，remove元素请使用Iterator方式。</p>
+<p>说明：使用Arrays.asList生成的列表是固定大小的，基于原始数组。尝试添加或删除元素会抛出UnsupportedOperationException，因为这些操作需要改变底层数组的大小，而Arrays.asList返回的列表不支持这种修改。为了修改集合，应使用其他可变列表实现，如ArrayList。</p>
+<p>错例：</p>
+<pre>
+   List<String> t = Arrays.asList("a","b","c");
+   //warn
+   t.add("22");
+   //warn
+   t.remove("22");
+   //warn
+   t.clear();
+</pre>
+<p>正例：</p>
+<pre>
+   List<String> t = new ArrayList<String>();
+   t.add("a");
+   t.add("b");
+   t.remove("a");
+   t.clear();
+</pre>

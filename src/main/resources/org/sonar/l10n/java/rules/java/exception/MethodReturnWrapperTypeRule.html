@@ -1,0 +1,23 @@
+<p>返回类型为基本数据类型，return包装数据类型的对象时，自动拆箱有可能产生NPE的风险。</p>
+<p>错例：</p>
+<pre>
+    public int check() {
+        Integer num = null;
+        return num;
+    }
+    public boolean check2() {
+        Boolean adminUser = true;
+        return adminUser;
+    }
+</pre>
+<p>正例：</p>
+<pre>
+    public long check3() {
+        long t = 5L;
+        return t;
+    }
+    public Double check4() {
+        Double t = 3.5;
+        return t;
+    }
+</pre>

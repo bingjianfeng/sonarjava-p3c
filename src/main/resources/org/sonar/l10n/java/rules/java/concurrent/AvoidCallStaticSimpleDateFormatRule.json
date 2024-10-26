@@ -1,0 +1,15 @@
+{
+  "title": "SimpleDateFormat可能导致线程安全问题",
+  "type": "CODE_SMELL",
+  "status": "ready",
+  "remediation": {
+    "func": "Constant\/Issue",
+    "constantCost": "5min"
+  },
+  "tags": [
+    "sonarjava-p3c"
+  ],
+  "defaultSeverity": "CRITICAL",
+  "sqKey": "AvoidCallStaticSimpleDateFormatRule",
+  "scope": "Main"
+}

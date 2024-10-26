@@ -1,0 +1,9 @@
+<p>说明：使用集合转数组的方法，必须使用集合的toArray(T[] array)，传入的是类型完全一样的数组，大小就是list.size()</p>
+<p>错例：</p>
+<pre>
+   Integer[] a = (Integer [])c.toArray();
+</pre>
+<p>正例：</p>
+<pre>
+    Integer[] b = (Integer [])c.toArray(new Integer[c.size()]);
+</pre>

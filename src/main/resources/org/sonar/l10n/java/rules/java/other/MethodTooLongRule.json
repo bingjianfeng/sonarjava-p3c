@@ -1,0 +1,15 @@
+{
+  "title": "单个方法的总行数超过指定阈值",
+  "type": "CODE_SMELL",
+  "status": "ready",
+  "remediation": {
+    "func": "Constant\/Issue",
+    "constantCost": "5min"
+  },
+  "tags": [
+    "sonarjava-p3c"
+  ],
+  "defaultSeverity": "MAJOR",
+  "sqKey": "MethodTooLongRule",
+  "scope": "Main"
+}

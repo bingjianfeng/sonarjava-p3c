@@ -1,0 +1,15 @@
+{
+  "title": "注解【Transactional】需要设置rollbackFor属性",
+  "type": "CODE_SMELL",
+  "status": "ready",
+  "remediation": {
+    "func": "Constant\/Issue",
+    "constantCost": "5min"
+  },
+  "tags": [
+    "sonarjava-p3c"
+  ],
+  "defaultSeverity": "CRITICAL",
+  "sqKey": "TransactionMustHaveRollbackRule",
+  "scope": "Main"
+}

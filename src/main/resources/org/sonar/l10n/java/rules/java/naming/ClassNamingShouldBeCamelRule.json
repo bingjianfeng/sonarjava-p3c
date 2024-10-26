@@ -1,0 +1,15 @@
+{
+  "title": "类命名不符合UpperCamelCase命名风格",
+  "type": "CODE_SMELL",
+  "status": "ready",
+  "remediation": {
+    "func": "Constant\/Issue",
+    "constantCost": "5min"
+  },
+  "tags": [
+    "sonarjava-p3c"
+  ],
+  "defaultSeverity": "MAJOR",
+  "sqKey": "ClassNamingShouldBeCamelRule",
+  "scope": "Main"
+}

@@ -1,0 +1,15 @@
+{
+  "title": "锁必须紧跟try代码块，且unlock要放到finally第一行",
+  "type": "CODE_SMELL",
+  "status": "ready",
+  "remediation": {
+    "func": "Constant\/Issue",
+    "constantCost": "5min"
+  },
+  "tags": [
+    "sonarjava-p3c"
+  ],
+  "defaultSeverity": "MAJOR",
+  "sqKey": "LockShouldWithTryFinallyRule",
+  "scope": "Main"
+}

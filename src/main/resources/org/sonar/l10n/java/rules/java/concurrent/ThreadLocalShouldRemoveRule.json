@@ -1,0 +1,15 @@
+{
+  "title": "ThreadLocal字段应该至少调用一次remove方法",
+  "type": "CODE_SMELL",
+  "status": "ready",
+  "remediation": {
+    "func": "Constant\/Issue",
+    "constantCost": "5min"
+  },
+  "tags": [
+    "sonarjava-p3c"
+  ],
+  "defaultSeverity": "CRITICAL",
+  "sqKey": "ThreadLocalShouldRemoveRule",
+  "scope": "Main"
+}

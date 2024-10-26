@@ -1,0 +1,15 @@
+{
+  "title": "在subList场景中，请注意对原列表的修改，容易触发ConcurrentModificationException异常。",
+  "type": "CODE_SMELL",
+  "status": "ready",
+  "remediation": {
+    "func": "Constant\/Issue",
+    "constantCost": "5min"
+  },
+  "tags": [
+    "sonarjava-p3c"
+  ],
+  "defaultSeverity": "CRITICAL",
+  "sqKey": "ConcurrentExceptionWithModifyOriginSubListRule",
+  "scope": "Main"
+}

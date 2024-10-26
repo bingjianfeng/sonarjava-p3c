@@ -1,0 +1,15 @@
+{
+  "title": "抽象类命名应以Abstract或Base开头",
+  "type": "CODE_SMELL",
+  "status": "ready",
+  "remediation": {
+    "func": "Constant\/Issue",
+    "constantCost": "5min"
+  },
+  "tags": [
+    "sonarjava-p3c"
+  ],
+  "defaultSeverity": "CRITICAL",
+  "sqKey": "AbstractClassShouldStartWithAbstractNamingRule",
+  "scope": "Main"
+}

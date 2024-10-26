@@ -1,0 +1,15 @@
+{
+  "title": "请不要在循环体内使用\"+\"连接字符串",
+  "type": "CODE_SMELL",
+  "status": "ready",
+  "remediation": {
+    "func": "Constant\/Issue",
+    "constantCost": "5min"
+  },
+  "tags": [
+    "sonarjava-p3c"
+  ],
+  "defaultSeverity": "MAJOR",
+  "sqKey": "StringConcatRule",
+  "scope": "Main"
+}

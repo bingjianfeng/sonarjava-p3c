@@ -1,0 +1,15 @@
+{
+  "title": "ArrayList的subList结果不可强转成ArrayList",
+  "type": "CODE_SMELL",
+  "status": "ready",
+  "remediation": {
+    "func": "Constant\/Issue",
+    "constantCost": "5min"
+  },
+  "tags": [
+    "sonarjava-p3c"
+  ],
+  "defaultSeverity": "CRITICAL",
+  "sqKey": "ClassCastExceptionWithSubListToArrayListRule",
+  "scope": "Main"
+}

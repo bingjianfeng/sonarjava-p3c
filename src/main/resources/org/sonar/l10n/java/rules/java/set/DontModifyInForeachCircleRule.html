@@ -1,0 +1,25 @@
+<p>不要在foreach循环里进行元素的remove/add操作，remove元素请使用Iterator方式。</p>
+<p>说明：在Java中，直接在foreach循环中对集合进行添加或删除操作会导致ConcurrentModificationException，因为迭代器会检测到集合被修改。为避免异常并确保安全，应使用Iterator的remove()方法来移除元素，这样可以在遍历过程中安全地修改集合，同时保持线程安全和行为一致性。</p>
+<p>错例：</p>
+<pre>
+   List<String> originList = new ArrayList<String>();
+   originList.add("22");
+   for (String item : originList) {
+      //warn
+      originList.add("bb");
+   }
+</pre>
+<p>正例：</p>
+<pre>
+   List<String> originList = new ArrayList<>();
+   originList.add("11");
+   originList.add("22");
+   boolean delCondition = false;
+   Iterator<String> it = originList.iterator();
+   while(it.hasNext()){
+       Integer temp =  it.next();
+       if (delCondition) {
+           it.remove();
+       }
+   }
+</pre>

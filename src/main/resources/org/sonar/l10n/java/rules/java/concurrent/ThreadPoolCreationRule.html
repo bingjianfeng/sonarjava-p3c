@@ -1,0 +1,34 @@
+<p>线程池不允许使用Executors去创建，而是通过ThreadPoolExecutor的方式，这样的处理方式让写的同学更加明确线程池的运行规则，规避资源耗尽的风险。</p>
+<p>说明：Executors返回的线程池对象的弊端如下：
+    1）FixedThreadPool和SingleThreadPool:   允许的请求队列长度为Integer.MAX_VALUE，可能会堆积大量的请求，从而导致OOM；
+    2）CachedThreadPool:   允许的创建线程数量为Integer.MAX_VALUE，可能会创建大量的线程，从而导致OOM。
+</p>
+<p>错例：</p>
+<pre>
+    public void check(){
+        ExecutorService fixedThreadPool = Executors.newFixedThreadPool(5);
+        for (int i = 0; i < 10; i++) {
+            final int index = i;
+            fixedThreadPool.execute(() -> {
+                System.out.println("Fixed Pool Task " + index + " is running");
+            });
+        }
+        fixedThreadPool.shutdown();
+    }
+</pre>
+<p>正例：</p>
+<pre>
+    public void check(){
+        ThreadPoolExecutor executor = new ThreadPoolExecutor(
+                5, 10, 60L, TimeUnit.SECONDS,
+                new LinkedBlockingQueue<>(100)
+        );
+        for (int i = 0; i < 10; i++) {
+            final int index = i;
+            executor.execute(() -> {
+                System.out.println("Task " + index + " is running");
+            });
+        }
+        executor.shutdown();
+    }
+</pre>

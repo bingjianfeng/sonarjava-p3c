@@ -1,0 +1,32 @@
+<p>避免采用取反逻辑运算符。</p>
+<p>说明: 取反逻辑不利于快速理解，并且取反逻辑写法必然存在对应的正向逻辑写法。</p>
+<p>错例：</p>
+<pre>
+    public int check(int number) {
+        return !!(number < 0); // 双重否定运算符，尽量避免使用
+    }
+
+    public int check2(int number) {
+        boolean flag = !!false; // 双重否定运算符，尽量避免使用
+        return number;
+    }
+
+    public int check3(int number) {
+        boolean flag = false;
+        if (!flag && number != 0 && number != 100) { // 过多否定运算符不利于快速理解
+            return number + 10;
+        }
+        return number;
+    }
+</pre>
+<p>正例：</p>
+<pre>
+    public int check(int number) {
+        return number < 0;
+    }
+
+    public int check2(int number) {
+        boolean flag = false;
+        return number;
+    }
+</pre>

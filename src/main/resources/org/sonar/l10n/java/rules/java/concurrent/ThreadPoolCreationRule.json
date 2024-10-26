@@ -1,0 +1,15 @@
+{
+  "title": "线程池应该手工创建，避免使用Executors自动创建",
+  "type": "CODE_SMELL",
+  "status": "ready",
+  "remediation": {
+    "func": "Constant\/Issue",
+    "constantCost": "5min"
+  },
+  "tags": [
+    "sonarjava-p3c"
+  ],
+  "defaultSeverity": "BLOCKER",
+  "sqKey": "ThreadPoolCreationRule",
+  "scope": "Main"
+}

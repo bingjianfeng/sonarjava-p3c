@@ -1,0 +1,25 @@
+<p>方法名、参数名、成员变量、局部变量都统一使用lowerCamelCase，必须遵从驼峰形式。</p>
+<p>错例：</p>
+<pre>
+class LowerCamelCaseVariableNamingRule {
+    private int CheckNum; // Noncompliant {{变量名【CheckNum】不符合lowerCamelCase命名风格}}
+    private void CheckMe  // Noncompliant {{方法名【CheckMe】不符合lowerCamelCase命名风格}}
+             (
+              String check1,
+              String Check2 // Noncompliant {{变量名【Check2】不符合lowerCamelCase命名风格}}
+    ) {
+        String checkPoint1 = "test";
+        String CheckPoint2 = "test2";  // Noncompliant {{变量名【CheckPoint2】不符合lowerCamelCase命名风格}}
+    }
+}
+</pre>
+<p>正例：</p>
+<pre>
+class LowerCamelCaseVariableNamingRule {
+    private int checkNum;
+    private void checkMe(String check1, String check2) {
+        String checkPoint1 = "test";
+        String checkPoint2 = "test2";
+    }
+}
+</pre>

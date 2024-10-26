@@ -1,0 +1,11 @@
+<p>说明：ArrayList的subList结果不可强转成ArrayList，否则会抛出ClassCastException异常。</p>
+<p>错例：</p>
+<pre>
+   List<String> list = new ArrayList<String>();
+   list.add("22");
+   List<String> test = (ArrayList<String>) list.subList(0, 1);
+</pre>
+<p>正例：</p>
+<pre>
+    List<String> list = new ArrayList<String>(list.subList(0, 1));
+</pre>

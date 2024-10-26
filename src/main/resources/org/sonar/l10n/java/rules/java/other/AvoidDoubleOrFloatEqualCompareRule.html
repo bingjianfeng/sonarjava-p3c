@@ -1,0 +1,54 @@
+<p>浮点数采用“尾数+阶码”的编码方式，类似于科学计数法的“有效数字+指数”的表示方式。二进制无法精确表示大部分的十进制小数，具体原理参考《码出高效》</p>
+<p>改进方式：</p>
+<pre>
+1）指定一个误差范围，两个浮点数的差值在此范围之内，则认为是相等的
+float a = 1.0f - 0.9f;
+float b = 0.9f - 0.8f;
+float diff = 1e-6f;
+
+if (Math.abs(a - b) < diff) {
+    System.out.println("true");
+}
+
+2) 使用BigDecimal来定义值，再进行浮点数的运算操作
+BigDecimal a = new BigDecimal("1.0");
+BigDecimal b = new BigDecimal("0.9");
+BigDecimal c = new BigDecimal("0.8");
+
+BigDecimal x = a.subtract(b);
+BigDecimal y = b.subtract(c);
+
+if (x.equals(y)) {
+    System.out.println("true");
+}
+</pre>
+<p>错例：</p>
+<pre>
+    public void compareFloats(float a, float b) {
+        if (a == b) {  // Noncompliant
+          System.out.println("a is equal to b");
+        }
+    }
+
+    public void compareDoubleWrappers(Double totalAmount, Double amount) {
+        if (!totalAmount.equals(amount)) {  // Noncompliant
+            System.out.println("totalAmount is not equal to amount");
+        }
+    }
+</pre>
+<p>正例：</p>
+<pre>
+    public void compareFloats(float a, float b) {
+        if (Math.abs(a - b) < EPSILON) { // Compliant
+            System.out.println("a is approximately equal to b");
+        }
+    }
+
+    public void compareDoubles(double a, double b) {
+        BigDecimal decimal1 = new BigDecimal(String.valueOf(a));
+        BigDecimal decimal2 = new BigDecimal(String.valueOf(b));
+        if (decimal1.compareTo(decimal2) != 0) { // Compliant
+            System.out.println("a is not equal to b");
+        }
+    }
+</pre>

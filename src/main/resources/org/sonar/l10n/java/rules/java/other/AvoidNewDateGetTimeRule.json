@@ -1,0 +1,15 @@
+{
+  "title": "请使用System.currentTimeMillis()代替new Date().getTime()",
+  "type": "CODE_SMELL",
+  "status": "ready",
+  "remediation": {
+    "func": "Constant\/Issue",
+    "constantCost": "5min"
+  },
+  "tags": [
+    "sonarjava-p3c"
+  ],
+  "defaultSeverity": "BLOCKER",
+  "sqKey": "AvoidNewDateGetTimeRule",
+  "scope": "Main"
+}

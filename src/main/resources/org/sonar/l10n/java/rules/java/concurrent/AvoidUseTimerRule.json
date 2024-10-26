@@ -1,0 +1,15 @@
+{
+  "title": "多线程并行处理定时任务时，Timer运行多个TimeTask时，应使用ScheduledExecutorService。",
+  "type": "CODE_SMELL",
+  "status": "ready",
+  "remediation": {
+    "func": "Constant\/Issue",
+    "constantCost": "5min"
+  },
+  "tags": [
+    "sonarjava-p3c"
+  ],
+  "defaultSeverity": "BLOCKER",
+  "sqKey": "AvoidUseTimerRule",
+  "scope": "Main"
+}

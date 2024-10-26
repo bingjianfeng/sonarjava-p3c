@@ -1,0 +1,15 @@
+{
+  "title": "常量命名应全部大写并以下划线分隔",
+  "type": "CODE_SMELL",
+  "status": "ready",
+  "remediation": {
+    "func": "Constant\/Issue",
+    "constantCost": "5min"
+  },
+  "tags": [
+    "sonarjava-p3c"
+  ],
+  "defaultSeverity": "CRITICAL",
+  "sqKey": "ConstantFieldShouldBeUpperCaseRule",
+  "scope": "Main"
+}

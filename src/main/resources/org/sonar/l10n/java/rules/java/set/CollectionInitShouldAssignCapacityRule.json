@@ -1,0 +1,15 @@
+{
+  "title": "集合初始化时，指定集合初始值大小",
+  "type": "CODE_SMELL",
+  "status": "ready",
+  "remediation": {
+    "func": "Constant\/Issue",
+    "constantCost": "5min"
+  },
+  "tags": [
+    "sonarjava-p3c"
+  ],
+  "defaultSeverity": "MAJOR",
+  "sqKey": "CollectionInitShouldAssignCapacityRule",
+  "scope": "Main"
+}

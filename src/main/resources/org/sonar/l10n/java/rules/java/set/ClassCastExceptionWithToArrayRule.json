@@ -1,0 +1,15 @@
+{
+  "title": "应使用大小一致类型一致的数组参数",
+  "type": "CODE_SMELL",
+  "status": "ready",
+  "remediation": {
+    "func": "Constant\/Issue",
+    "constantCost": "5min"
+  },
+  "tags": [
+    "sonarjava-p3c"
+  ],
+  "defaultSeverity": "CRITICAL",
+  "sqKey": "ClassCastExceptionWithToArrayRule",
+  "scope": "Main"
+}

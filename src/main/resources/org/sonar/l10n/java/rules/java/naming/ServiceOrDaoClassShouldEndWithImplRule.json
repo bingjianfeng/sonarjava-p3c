@@ -1,0 +1,15 @@
+{
+  "title": "Dao或Service接口的实现，必须以Impl结尾",
+  "type": "CODE_SMELL",
+  "status": "ready",
+  "remediation": {
+    "func": "Constant\/Issue",
+    "constantCost": "5min"
+  },
+  "tags": [
+    "sonarjava-p3c"
+  ],
+  "defaultSeverity": "CRITICAL",
+  "sqKey": "ServiceOrDaoClassShouldEndWithImplRule",
+  "scope": "Main"
+}

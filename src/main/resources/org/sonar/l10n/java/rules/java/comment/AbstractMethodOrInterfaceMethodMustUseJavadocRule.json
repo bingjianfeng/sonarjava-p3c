@@ -1,0 +1,15 @@
+{
+  "title": "所有的抽象方法必须要用javadoc注释、除了返回值、参数、异常说明外，还必须指出该方法的用途。",
+  "type": "CODE_SMELL",
+  "status": "ready",
+  "remediation": {
+    "func": "Constant\/Issue",
+    "constantCost": "5min"
+  },
+  "tags": [
+    "sonarjava-p3c"
+  ],
+  "defaultSeverity": "MAJOR",
+  "sqKey": "AbstractMethodOrInterfaceMethodMustUseJavadocRule",
+  "scope": "Main"
+}

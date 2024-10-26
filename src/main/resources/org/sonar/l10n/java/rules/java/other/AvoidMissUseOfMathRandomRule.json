@@ -1,0 +1,15 @@
+{
+  "title": "注意 Math.random() 这个方法返回是double类型，注意取值的范围。",
+  "type": "CODE_SMELL",
+  "status": "ready",
+  "remediation": {
+    "func": "Constant\/Issue",
+    "constantCost": "5min"
+  },
+  "tags": [
+    "sonarjava-p3c"
+  ],
+  "defaultSeverity": "MAJOR",
+  "sqKey": "AvoidMissUseOfMathRandomRule",
+  "scope": "Main"
+}

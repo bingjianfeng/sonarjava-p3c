@@ -1,0 +1,15 @@
+{
+  "title": "Pattern变量应定义为常量或者字段",
+  "type": "CODE_SMELL",
+  "status": "ready",
+  "remediation": {
+    "func": "Constant\/Issue",
+    "constantCost": "5min"
+  },
+  "tags": [
+    "sonarjava-p3c"
+  ],
+  "defaultSeverity": "BLOCKER",
+  "sqKey": "AvoidPatternCompileInMethodRule",
+  "scope": "Main"
+}

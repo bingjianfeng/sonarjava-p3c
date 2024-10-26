@@ -1,0 +1,13 @@
+<p>对于Service和DAO类，基于SOA的理念，暴露出来的服务一定是接口，内部的实现类用Impl的后缀与接口区别。</p>
+<p>错例：</p>
+<pre>
+class UserInfoDaoReg implements UserInfoDao {
+    ....
+}
+</pre>
+<p>正例：</p>
+<pre>
+class UserInfoDaoImpl implements UserInfoDao {
+    ....
+}
+</pre>

@@ -1,0 +1,15 @@
+{
+  "title": "返回类型为基本数据类型，return包装数据类型的对象时，自动拆箱有可能产生NPE的风险",
+  "type": "CODE_SMELL",
+  "status": "ready",
+  "remediation": {
+    "func": "Constant\/Issue",
+    "constantCost": "5min"
+  },
+  "tags": [
+    "sonarjava-p3c"
+  ],
+  "defaultSeverity": "MAJOR",
+  "sqKey": "MethodReturnWrapperTypeRule",
+  "scope": "Main"
+}

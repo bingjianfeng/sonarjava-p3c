@@ -1,0 +1,15 @@
+{
+  "title": "变更以Arrays.asList()生成的集合，可能会导致UnsupportedOperationException",
+  "type": "CODE_SMELL",
+  "status": "ready",
+  "remediation": {
+    "func": "Constant\/Issue",
+    "constantCost": "5min"
+  },
+  "tags": [
+    "sonarjava-p3c"
+  ],
+  "defaultSeverity": "CRITICAL",
+  "sqKey": "UnsupportedExceptionWithModifyAsListRule",
+  "scope": "Main"
+}

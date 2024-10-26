@@ -1,0 +1,15 @@
+{
+  "title": "【Math.random()】应避免在多线程并发环境下使用",
+  "type": "CODE_SMELL",
+  "status": "ready",
+  "remediation": {
+    "func": "Constant\/Issue",
+    "constantCost": "5min"
+  },
+  "tags": [
+    "sonarjava-p3c"
+  ],
+  "defaultSeverity": "MAJOR",
+  "sqKey": "AvoidConcurrentCompetitionRandomRule",
+  "scope": "Main"
+}

@@ -1,0 +1,15 @@
+{
+  "title": "定义DO/DTO/VO等POJO类时，不要加任何属性默认值",
+  "type": "CODE_SMELL",
+  "status": "ready",
+  "remediation": {
+    "func": "Constant\/Issue",
+    "constantCost": "5min"
+  },
+  "tags": [
+    "sonarjava-p3c"
+  ],
+  "defaultSeverity": "MAJOR",
+  "sqKey": "PojoNoDefaultValueRule",
+  "scope": "Main"
+}

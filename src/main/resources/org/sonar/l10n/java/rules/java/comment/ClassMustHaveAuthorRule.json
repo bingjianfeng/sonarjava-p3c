@@ -1,0 +1,15 @@
+{
+  "title": "所有的类都必须添加创建者信息",
+  "type": "CODE_SMELL",
+  "status": "ready",
+  "remediation": {
+    "func": "Constant\/Issue",
+    "constantCost": "5min"
+  },
+  "tags": [
+    "sonarjava-p3c"
+  ],
+  "defaultSeverity": "MAJOR",
+  "sqKey": "ClassMustHaveAuthorRule",
+  "scope": "Main"
+}

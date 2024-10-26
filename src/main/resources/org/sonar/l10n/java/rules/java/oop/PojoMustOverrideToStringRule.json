@@ -1,0 +1,15 @@
+{
+  "title": "POJO类必须写toString方法",
+  "type": "CODE_SMELL",
+  "status": "ready",
+  "remediation": {
+    "func": "Constant\/Issue",
+    "constantCost": "5min"
+  },
+  "tags": [
+    "sonarjava-p3c"
+  ],
+  "defaultSeverity": "MAJOR",
+  "sqKey": "PojoMustOverrideToStringRule",
+  "scope": "Main"
+}

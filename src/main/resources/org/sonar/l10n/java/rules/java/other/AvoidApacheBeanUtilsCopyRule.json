@@ -1,0 +1,15 @@
+{
+  "title": "避免用Apache Beanutils进行属性的copy",
+  "type": "CODE_SMELL",
+  "status": "ready",
+  "remediation": {
+    "func": "Constant\/Issue",
+    "constantCost": "5min"
+  },
+  "tags": [
+    "sonarjava-p3c"
+  ],
+  "defaultSeverity": "BLOCKER",
+  "sqKey": "AvoidApacheBeanUtilsCopyRule",
+  "scope": "Main"
+}

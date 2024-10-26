@@ -1,0 +1,15 @@
+{
+  "title": "布尔字段不要加is前缀",
+  "type": "CODE_SMELL",
+  "status": "ready",
+  "remediation": {
+    "func": "Constant\/Issue",
+    "constantCost": "5min"
+  },
+  "tags": [
+    "sonarjava-p3c"
+  ],
+  "defaultSeverity": "CRITICAL",
+  "sqKey": "BooleanPropertyShouldNotStartWithIsRule",
+  "scope": "Main"
+}

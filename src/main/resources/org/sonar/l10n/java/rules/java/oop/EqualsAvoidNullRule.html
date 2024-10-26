@@ -1,0 +1,18 @@
+<p>错例：</p>
+<pre>
+   public void check(String input) {
+        boolean result = input.equals("expectedValue");
+        if (result) {
+            System.out.println("Input matches the expected value.");
+        }
+    }
+</pre>
+<p>正例：</p>
+<pre>
+    public void check2 () {
+        boolean result = "expectedValue".equals(input);
+        if (result) {
+            System.out.println("Input matches the expected value.");
+        }
+    }
+</pre>

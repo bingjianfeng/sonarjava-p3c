@@ -1,0 +1,47 @@
+<p>SimpleDateFormat 是线程不安全的类，一般不要定义为static变量，如果定义为static，必须加锁，或者使用DateUtils工具类。</p>
+<p>错例：</p>
+<pre>
+public class AvoidCallStaticSimpleDateFormatExample {
+    private static SimpleDateFormat dateFormat1 = new SimpleDateFormat("yyyy-MM-dd");
+    public String format(Date date) {
+        return dateFormat1.format(date); // Noncompliant {{SimpleDateFormat可能导致线程安全问题}}
+    }
+}
+
+public class AvoidCallSimpleDateFormatInMethodExample {
+    public String format(Date date) {
+        SimpleDateFormat dateFormat1 = new SimpleDateFormat("yyyy-MM-dd"); // Noncompliant {{SimpleDateFormat可能导致线程安全问题}}
+        return dateFormat1.format(date);
+    }
+}
+
+public class NotSynchronizedSimpleDateFormatExample {
+    private static final SimpleDateFormat dateFormat2 = new SimpleDateFormat("yyyy-MM-dd");
+    public String format(Date date) {
+        return dateFormat2.format(date);  // Noncompliant {{SimpleDateFormat可能导致线程安全问题}}
+    }
+}
+</pre>
+<p>正例：</p>
+<pre>
+private static final String FORMAT = "yyyy-MM-dd HH:mm:ss";
+public String getFormat(Date date){
+    SimpleDateFormat dateFormat = new SimpleDateFormat(FORMAT);
+    return sdf.format(date);
+}
+
+private static final SimpleDateFormat SIMPLE_DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+public void getFormat(){
+   synchronized (sdf){
+       sdf.format(new Date());
+       ….;
+   }
+}
+
+private static final ThreadLocal<DateFormat> DATE_FORMATTER = new ThreadLocal<DateFormat>() {
+    @Override
+    protected DateFormat initialValue() {
+        return new SimpleDateFormat("yyyy-MM-dd");
+    }
+};
+</pre>
