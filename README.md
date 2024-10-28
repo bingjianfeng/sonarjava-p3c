@@ -411,7 +411,7 @@ public class SwitchStatementRule extends IssuableSubscriptionVisitor {
 
 编写完规则以后，需要绑定规则到RulesList.java，已按规则类型对集合进行了划分，下面是绑定 SwitchStatementRule 规则的例子：
 
-![image-20241016112512701](https://raw.githubusercontent.com/elvisfung/sonarjava-p3c/refs/heads/main/images/image-20241016112512701.png?token=GHSAT0AAAAAACZTIZV7XG3UERV4K3UD3VJCZY67UGA)
+![image-20241016112512701](images/image-20241016112512701.png)
 
 
 
@@ -421,7 +421,7 @@ public class SwitchStatementRule extends IssuableSubscriptionVisitor {
 
 绑定规则以后，到 src/main/resources/org.sonar.l10n.javarules.java.*，编写规则描述文件
 
-![image-20241016112742611](https://raw.githubusercontent.com/elvisfung/sonarjava-p3c/refs/heads/main/images/image-20241016112742611.png?token=GHSAT0AAAAAACZTIZV7F3UIP4Y7PGYD3GRCZY67UQA)
+![image-20241016112742611](images/image-20241016112742611.png)
 
 
 
@@ -471,7 +471,7 @@ SwitchStatementRule.html 是对规则的详细描述，包括为什么命中这�
 
 根据规则类型，到 src/test/java/com.elvis.sonar.java.checks.*，编写单元测试方法
 
-![image-20241028103344646](https://raw.githubusercontent.com/elvisfung/sonarjava-p3c/refs/heads/main/images/image-20241028103344646.png?token=GHSAT0AAAAAACZTIZV6BB34VKPWU7P7ZW3CZY67UZQ)
+![image-20241028103344646](images/image-20241028103344646.png)
 
 
 
@@ -511,7 +511,7 @@ public class SwitchStatementRuleTest {
 
 根据规则类型，到 src/test/files/*，编写测试用例
 
-![image-20241016144926957](https://raw.githubusercontent.com/elvisfung/sonarjava-p3c/refs/heads/main/images/image-20241016144926957.png?token=GHSAT0AAAAAACZTIZV6L5MLVXU7VGEBLIOSZY67VFQ)
+![image-20241016144926957](images/image-20241016144926957.png)
 
 
 
@@ -577,19 +577,19 @@ class SwitchStatementRule {
 
 例如此行应该会汇报问题的，但注释了 Compliant。如果确定标记没问题，则建议在规则代码内下断点进行调试。
 
-![image-20241016150007791](https://raw.githubusercontent.com/elvisfung/sonarjava-p3c/refs/heads/main/images/image-20241016150007791.png?token=GHSAT0AAAAAACZTIZV6BXXYEYMP24QWW7PEZY67VVQ)
+![image-20241016150007791](images/image-20241016150007791.png?token=GHSAT0AAAAAACZTIZV6BXXYEYMP24QWW7PEZY67VVQ)
 
 
 
 另一种情况，如下图所示，则代表测试用例的 Noncompliant 提示信息，不符合实际预期。可自行判断是用例问题还是规则代码问题。
 
-![image-20241016150459853](https://raw.githubusercontent.com/elvisfung/sonarjava-p3c/refs/heads/main/images/image-20241016150459853.png?token=GHSAT0AAAAAACZTIZV6BHVYNZGANQD6MHGEZY67WCQ)
+![image-20241016150459853](images/image-20241016150459853.png)
 
 
 
 如果单元测试通过，会返回成功，如下图所示：
 
-![image-20241016145902403](https://raw.githubusercontent.com/elvisfung/sonarjava-p3c/refs/heads/main/images/image-20241016145902403.png?token=GHSAT0AAAAAACZTIZV6CHDHPSTQCWHBQRRUZY67WNA)
+![image-20241016145902403](images/image-20241016145902403.png)
 
 
 
@@ -601,26 +601,26 @@ class SwitchStatementRule {
 
 在IDEA中，对项目执行 clean 和 install
 
-![image-20241028103710091](https://raw.githubusercontent.com/elvisfung/sonarjava-p3c/refs/heads/main/images/image-20241028103710091.png?token=GHSAT0AAAAAACZTIZV7LGERLM5UEBOYQK54ZY67WZQ)
+![image-20241028103710091](images/image-20241028103710091.png)
 
 
 
 install 执行完以后，会提示 Build Success
 
-![image-20241028104101098](https://raw.githubusercontent.com/elvisfung/sonarjava-p3c/refs/heads/main/images/image-20241028104101098.png?token=GHSAT0AAAAAACZTIZV7NCB4NABRWRAA6FYAZY67XNA)
+![image-20241028104101098](images/image-20241028104101098.png)
 
 
 
 会在项目target目录下，找到需要发布的jar包
 
-![image-20241028104143118](https://raw.githubusercontent.com/elvisfung/sonarjava-p3c/refs/heads/main/images/image-20241028104143118.png?token=GHSAT0AAAAAACZTIZV7G6Y5LIKU36WCSGEEZY67XXA)
+![image-20241028104143118](images/image-20241028104143118.png)
 
 
 
 发布完成后，进入SonarQube控制台，在 质量配置 -> Java -> elvis Java Rules 的规则界面中，你能找到自己开发的自定义规则。
 
-![image-20241016152520407](https://raw.githubusercontent.com/elvisfung/sonarjava-p3c/refs/heads/main/images/image-20241016152520407.png?token=GHSAT0AAAAAACZTIZV6S3WK4VEA22VMJBXWZY67YSA)
+![image-20241016152520407](images/image-20241016152520407.png)
 
 
 
-![image-20241016152553449](https://raw.githubusercontent.com/elvisfung/sonarjava-p3c/refs/heads/main/images/image-20241016152553449.png?token=GHSAT0AAAAAACZTIZV6RSJS2UDUHUDA7HKYZY67Y4Q)
+![image-20241016152553449](images/image-20241016152553449.png)
