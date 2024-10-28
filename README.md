@@ -29,7 +29,7 @@
 
 ------
 
-![image-20241028102929998](https://raw.githubusercontent.com/elvisfung/sonarjava-p3c/refs/heads/main/images/image-20241016095357045.png?token=GHSAT0AAAAAACZTIZV6MFYORLXEMMQ6A2XSZY67TYQ)
+![image-20241028102929998](images/image-20241016095357045.png)
 
 项目结构如上图，核心代码的包路径提示如下：
 
