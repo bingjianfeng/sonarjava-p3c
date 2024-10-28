@@ -38,10 +38,13 @@ public class TestClassShouldEndWithTestNamingRule extends IssuableSubscriptionVi
 
     private boolean hasJUnitTestMethods(ClassTree classTree) {
         for (Tree tree : classTree.members()) {
-            if(!tree.is(Tree.Kind.METHOD)){
+            if (!tree.is(Tree.Kind.METHOD)) {
                 continue;
             }
             MethodTree methodTree = (MethodTree) tree;
+            if (methodTree.symbol() == null || methodTree.symbol().metadata() == null) {
+                continue;
+            }
             SymbolMetadata metadata = methodTree.symbol().metadata();
             if (metadata.annotations() == null || metadata.annotations().size() == 0) {
                 continue;

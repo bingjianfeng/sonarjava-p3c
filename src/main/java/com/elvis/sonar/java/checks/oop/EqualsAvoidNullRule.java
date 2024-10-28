@@ -1,6 +1,7 @@
 package com.elvis.sonar.java.checks.oop;
 
 import com.elvis.sonar.java.checks.utils.MethodInvocationTreeCheckUtil;
+import com.elvis.sonar.java.utils.StringUtils;
 import org.sonar.check.Rule;
 import org.sonar.plugins.java.api.IssuableSubscriptionVisitor;
 import org.sonar.plugins.java.api.semantic.Symbol;
@@ -50,7 +51,11 @@ public class EqualsAvoidNullRule extends IssuableSubscriptionVisitor {
 
         // 检查参数是否为常量或确定不为null的对象
         if (!isConstantOrNonNullObject(receiver)) {
-            reportIssue(receiver, String.format(MESSAGE, MethodInvocationTreeCheckUtil.getName(methodInvocation)));
+            String methodName = MethodInvocationTreeCheckUtil.getName(methodInvocation);
+            if(StringUtils.isBlankOrNull(methodName)){
+                methodName = "Object";
+            }
+            reportIssue(receiver, String.format(MESSAGE, methodName));
         }
     }
 

@@ -41,4 +41,12 @@ public final class StringUtils {
         return string == null || string.isEmpty();
     }
 
+    public static boolean isBlank(String string) {
+        return string == null || string.trim().isEmpty();
+    }
+
+    public static boolean isBlankOrNull(String string) {
+        return string == null || string.trim().isEmpty() || "null".equalsIgnoreCase(string.trim());
+    }
+
 }
